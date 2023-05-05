@@ -2,14 +2,14 @@ import React from 'react';
 
 function ProductRow({ products }) {
   const productList = products.map((product) => {
-    const stock = product.inStock ? 'black' : 'red';
-
     return (
       <tr>
-        <td width={200} className={stock}>
+        <td style={{ color: product.inStock ? 'black' : 'red' }}>
           {product.name}
         </td>
-        <td width={200}>$19.99</td>
+        <td style={{ color: product.inStock ? 'black' : 'red' }}>
+          {product.price}
+        </td>
       </tr>
     );
   });
