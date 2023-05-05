@@ -1,11 +1,19 @@
 import React from 'react';
 import ProductRow from './ProductRow';
 
-function ProductTable() {
+function ProductTable({ products }) {
   return (
-    <div>
-      <ProductRow />
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ProductRow products={products} />
+      </tbody>
+    </table>
   );
 }
 
